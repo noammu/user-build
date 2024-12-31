@@ -4,6 +4,7 @@ import styles from './_index.module.scss';
 import styles0 from './route.module.scss';
 import classNames from 'classnames';
 import { Check } from '../../../src/components/check/check';
+import { Form } from '@remix-run/react';
 
 export const loader = ({ request }: LoaderFunctionArgs) => {
     return { canonicalUrl: getUrlOriginWithPath(request.url) };
@@ -12,6 +13,12 @@ export const loader = ({ request }: LoaderFunctionArgs) => {
 export default function HomePage() {
     return (
         <div className={styles.root}>
+            <div>dfdf</div>
+            <Form method="post">
+                <button type="submit" name="Go Home bruh" value="Go Home bruh">
+                    Redirect to redirect :)
+                </button>
+            </Form>
             <div className={classNames(styles0.div1, styles0.div2, styles0.div3, styles0.div4)}>
                 <h1 className={styles0.header1}>Heading 1</h1>
                 <h2 className={styles0.header2}>Headin2342342342342</h2>

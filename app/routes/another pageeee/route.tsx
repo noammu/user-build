@@ -1,7 +1,9 @@
-import React from 'react';
 import styles from './route.module.scss';
 import classNames from 'classnames';
 import EspeonPng from '../../../src/assets/espeon.png';
+import PikachuGifGif from '../../../src/assets/pikachu-gif.gif';
+import BallPng from '../../../src/assets/ball.png';
+
 export default function Anotherpageeee() {
     return (
         <div className={styles.div1}>
@@ -73,8 +75,15 @@ export default function Anotherpageeee() {
                 <h6 className={classNames(styles.header1, styles.dana)}>Heading 6</h6>
             </footer>
             <div className={styles.grid}>
-                <img src={EspeonPng} alt="" className={styles.img2} />
+                <img src={EspeonPng} alt="" className={classNames(styles.img2, styles.img6)} />
+                <img src={PikachuGifGif} className={styles.img5} />
+                <img
+                    src="https://static.wixstatic.com/media/11062b_25e218a68cae48e98a21198d1280a6bd~mv2.jpg/v1/fill/w_600,h_399,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_25e218a68cae48e98a21198d1280a6bd~mv2.jpg"
+                    alt=""
+                    className={styles.img4}
+                />
                 <h2>Replace content</h2>
+                <img src={BallPng} alt="" className={styles.img7} />
             </div>
             <div className={styles.heroImage}>
                 <img
