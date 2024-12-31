@@ -1,6 +1,9 @@
 import { LinksFunction, LoaderFunctionArgs, MetaFunction } from '@remix-run/node';
 import { getUrlOriginWithPath } from '~/utils';
 import styles from './_index.module.scss';
+import styles0 from './route.module.scss';
+import classNames from 'classnames';
+import { Check } from '../../../src/components/check/check';
 
 export const loader = ({ request }: LoaderFunctionArgs) => {
     return { canonicalUrl: getUrlOriginWithPath(request.url) };
@@ -9,7 +12,12 @@ export const loader = ({ request }: LoaderFunctionArgs) => {
 export default function HomePage() {
     return (
         <div className={styles.root}>
-            <h2 className={styles.title}>Welcome To App Homepage 🎉</h2>
+            <div className={classNames(styles0.div1, styles0.div2, styles0.div3, styles0.div4)}>
+                <h1 className={styles0.header1}>Heading 1</h1>
+                <h2 className={styles0.header2}>Headin2342342342342</h2>
+            </div>
+            <div className={styles0.div5}>Text</div>
+            <h2 className={styles.title}>oujikjyhgjkh f gfme To App Homepage 🎉</h2>
             <span className={styles.paragraph}>
                 Drag here elements from the Add Elements Panel
                 <br /> and style them using the Styles panel
