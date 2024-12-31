@@ -1,0 +1,102 @@
+.img1 {
+    width: 150px;
+}
+.video1 {
+    width: 150px;
+}
+.header1 {
+    margin: 1px;
+}
+.dana {
+    background-color: #baff27;
+}
+.aside1 {
+    flex-direction: row;
+    width: 100px;
+}
+.nav1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.div1 {
+    width: 100vw;
+}
+.div2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grid {
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+.img2 {
+    grid-row: 1 / 4;
+    grid-column: 1 / 2;
+}
+.img3 {
+    grid-row: 1 / 3;
+    grid-column: 2 / 3;
+}
+.heroImage {
+    display: flex;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: row;
+    background-color: white;
+
+    @media (width <= 768px) {
+        flex-direction: column;
+    }
+}
+
+.heroImageImg {
+    object-fit: cover;
+    width: 50%;
+
+    @media (width <= 768px) {
+        width: 100%;
+    }
+}
+
+.heroImageContentBox {
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.heroImageTitle {
+    font-size: 68px;
+
+    @media (width <= 1024px) {
+        font-size: 52px;
+    }
+}
+
+.heroImageDescription {
+    font-size: 24px;
+    text-wrap: pretty;
+}
+
+.heroImageExploreButton {
+    padding: 16px 24px;
+    background-color: black;
+    border-radius: 28px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-out;
+    align-self: flex-start;
+    color: white;
+    @media (width <= 1024px) {
+        font-size: 16px;
+    }
+}
+
+.heroImageExploreButton:hover {
+    background-color: #848484;
+}
