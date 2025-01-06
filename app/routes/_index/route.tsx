@@ -1,16 +1,24 @@
-import { LinksFunction, LoaderFunctionArgs, MetaFunction } from '@remix-run/node';
+import { LinksFunction, LoaderFunctionArgs, MetaFunction, redirect } from '@remix-run/node';
 import { getUrlOriginWithPath } from '~/utils';
 import styles from './_index.module.scss';
 import styles0 from './route.module.scss';
 import classNames from 'classnames';
 import { Check } from '../../../src/components/check/check';
 import { Form } from '@remix-run/react';
+import PikachuGifGif from '../../../src/assets/pikachu-gif.gif';
+
+export const action = async ({ request, params }: LoaderFunctionArgs) => {
+    return redirect('/redirect');
+};
 
 export const loader = ({ request }: LoaderFunctionArgs) => {
     return { canonicalUrl: getUrlOriginWithPath(request.url) };
 };
 
 export default function HomePage() {
+    const handleRefresh = () => {
+        window.location.reload();
+    };
     return (
         <div className={styles.root}>
             <div>dfdf</div>
@@ -19,6 +27,7 @@ export default function HomePage() {
                     Redirect to redirect :)
                 </button>
             </Form>
+            <button onClick={handleRefresh}>Refresh Page</button>
             <div className={classNames(styles0.div1, styles0.div2, styles0.div3, styles0.div4)}>
                 <h1 className={styles0.header1}>Heading 1</h1>
                 <h2 className={styles0.header2}>Headin2342342342342</h2>
@@ -29,6 +38,12 @@ export default function HomePage() {
                 Drag here elements from the Add Elements Panel
                 <br /> and style them using the Styles panel
             </span>
+            <div>
+                <h1>Heading 1</h1>
+            </div>
+            <div>
+                <img src={PikachuGifGif} alt="" className={styles0.img1} />
+            </div>
         </div>
     );
 }
